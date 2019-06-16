@@ -1,0 +1,25 @@
+server:
+  port: 6000
+  servlet:
+    context-path: /uaa #所有路由加上该前缀
+
+eureka:
+  client:
+    service-url:
+        defaultZone:
+          http://localhost:8761/eureka/
+spring:
+  application:
+    name: jwtauth-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/spring_cloud_auth?
+    useSSL=false&useUnicode=true&
+    characterEncoding=UTF-8&
+    allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8"
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
